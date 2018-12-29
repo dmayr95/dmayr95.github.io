@@ -1,35 +1,33 @@
 
 #webdesign-background{
     background:
-            linear-gradient(
-                    rgba(0, 0, 0, 1),
-                    rgba(0, 0, 0, 0.5)
-            ),
-            url("../images/konzept-hintergrund.jpg");
+            linear-gradient(#ed1164aa,#ed1164aa),
+            url("../images/webdesign.jpg");
     background-position: center center;
     background-attachment: fixed;
     background-repeat: no-repeat;
     background-size: cover;
+    height: 250px;
 }
 
 #webdesign-content{
-    grid-row: 2/8;
+    margin-top:100px;
+    grid-row: 1/8;
     display: grid;
     grid-gap: 20px;
     grid-template-columns: repeat(8, 1fr);
-    grid-template-rows: repeat(4, 1fr);
+    grid-template-rows: repeat(5, 1fr);
     width: 100%;
     grid-column: 2/8;
-    text-align: center;
-    padding: 15px 15px 50px 15px;
-    background-color: rgba(230, 230, 230, 0.98);
-    justify-self: center;
+    /*! text-align: center; */
+    /*! padding: 15px 15px 50px 15px; */
+    /*! justify-self: center; */
     transition: 0.7s;
     line-height: 160%;
     color: #000000;
-    min-width: 250px;
-    grid-row-start: 2;
+    /*! min-width: 250px; */
     overflow: auto;
+    height: auto;
 }
 
 #webdesign-image-container{
@@ -37,14 +35,136 @@
     grid-row: 1/4;
 }
 
-#webdesign-text-container{
-    grid-column: 4/8;
-    grid-row: 1/5;
-}
-#webdesign-section{
-    grid-template-rows: repeat(8, 1fr);
+#webdesignImage{
+    max-width: 100%;
 }
 
-#webdesign-text-container h2{
-    margin-top: 20px;
+#webdesign-text-container{
+    /*! margin: 80px 0px; */ 
+    overflow: hidden;
+    text-align: left;
+    grid-column: 4/9;
+    grid-row: 1/5;
+    color:#ffffff;
 }
+#webdesign-section{
+    height:auto;
+    /*! grid-template-rows: repeat(8, 1fr); */
+    background-color:#222222;
+}
+
+#webdesign-section #h2Webdesign{
+    text-align: left;
+    margin: 40px 0px 40px 0px;   
+    transition: 0.8s;
+    grid-column: 1/9;
+    grid-row: 1/3;
+}
+
+#webdesignButton ul{
+    margin-bottom: 40px ;
+    text-align: center;
+    display: flex;
+}
+#webdesignButton ul{
+    margin-left: -13px;
+}
+
+
+#webdesignButton ul li:hover{
+    background-color: rgba(255, 255,255,0.4);
+}
+
+#webdesignButton ul li{
+    color:#fff;
+    cursor: pointer;
+    border: #ffffff 2px solid;
+    border-radius: 10px;
+    padding: 5px 10px;
+    margin-left: 30px;
+    background-color: rgba(80, 80,80,0.7);
+}
+
+#webdesignUberschrift{
+    margin-bottom: 20px;
+}
+
+@media(min-width:0px) and (max-width:700px){
+    #webdesign-content{
+        grid-template-rows: repeat(3, 1fr);
+        margin-top:0;
+        margin-bottom: 50px;
+    }
+    #webdesign-image-container{
+        margin-top: 100px;
+        justify-self: center;
+        align-self: center;
+        grid-column: 2/8;
+        grid-row: 1/2;
+    }
+    #webdesign-text-container{
+        padding: 0px 20px;
+        grid-row:2/5;
+        grid-column: 1/9;
+    }
+    #webdesign-content {
+        grid-column:1/9;
+    }
+    #webdesign-section #h2Webdesign{  
+        margin-bottom: 35px;
+        grid-row:2/4;
+        grid-column: 1/9;
+    }
+    #webdesignButton ul{
+        padding: 0 50px;
+        display: block;
+    }
+    #webdesignButton ul li{
+        margin: 0 auto 10px auto;
+    }
+}
+
+@media(min-width:700px) and (max-width:1100px){
+    #webdesign-image-container{
+        padding:0px;
+        grid-row-start: 1; 
+        grid-column: 1/6;
+    }
+    #webdesign-text-container{
+        margin: 90px 0px;
+        grid-row:2/7;
+        grid-column: 1/9;
+        z-index: 4;
+    }
+    #webdesign-section #h2Webdesign{  
+        grid-row:3/4;
+        grid-column: 2/8;
+        text-align: left;
+    }
+}
+
+@media(max-width:1000px){
+        #webdesign-section #h2Webdesign{  
+        margin-top: 10px !important;
+}
+
+@media(max-width:400px){
+    #webdesign-image-container{
+        padding: 0 10px;
+        margin-top: 100px;
+        justify-self: center;
+        align-self: center;
+        grid-column: 1/9;
+        grid-row: 1/2;
+    }
+}
+
+
+
+
+
+
+
+
+
+

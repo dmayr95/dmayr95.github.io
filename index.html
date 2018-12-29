@@ -9,24 +9,41 @@
     <link href="css/style.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
     <title>Portfolio - Damir Markovic</title>
-    <script src="js/scroll.js"></script>
-    <script src="js/menu.js"></script>
+    <script src="js/scroll.js"></script>   <style type="text/css">
+    *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+    #slider-container{
+        overflow:hidden;
+        height: 100%;
+        width:100vw;
+        margin: auto;
+    }
+    #slider-images{
+        display: flex;
+        height: inherit;
+        width: 100%;
+    }
+
+</style>
 </head>
 
-<body id="body" onscroll="scrollpos()" onload="getScreenWidth()">
-<header>
+<body id="body" onresize="menuResize()" onscroll="scrollpos()" onload="getScreenWidth()">
+<header id="main-header">
     <nav id="nav-bar">
         <div id="logoContainer">
             <img id="logo" src="images/dm_Logo_v2.png" alt="logo">
-            <a href="#top" id="logoText" >Recent Deisgns</a>
+            <a href="#main-header" id="logoText" >Recent Deisgns</a>
         </div>
         <ul id="nav-links">
-            <li><a href="#webdesign" name="webdesign">Webdesign</a></li>
-            <li><a href="#copyright" name="copyright">Urheberrecht</a></li>
-            <li><a href="#technology" name="technology">Technologien</a></li>
-            <li><a href="#preise" name="preise">Preise</a></li>
+            <li><a href="#webdesign-section">Webdesign</a></li>
+            <li><a href="#copyright-background">Urheberrecht</a></li>
+            <li><a href="#technology">Technologien</a></li>
+            <li><a href="#preise-background">Preisliste</a></li>
         </ul>
-        <div id="menu-button" onclick="showMenu()">
+        <div id="menu-button">
             <hr class="hr-transition" id="null-button-line">
             <hr class="hr-transition" id="first-button-line">
             <hr class="hr-transition" id="second-button-line">
@@ -38,8 +55,11 @@
         <hr class="hr">
         <h2 id="mainHeaderText_Sub">Unser Team hat sich auf kleine und Preiswerte Webauftritte spezialisiert</h2>
     </div>
-        <div id="header-image-container">
+        <div id="header-image-container"></div><div id="slider-container">
+    <div id="slider-images">
+        <!--filled with javascript-->
     </div>
+</div>
 </header>
 
 <main>
@@ -47,39 +67,31 @@
 
     <section id="webdesign-section" class="wrapper">
         <div class="section-background" id="webdesign-background"></div>
-        <h2 class="header-text">Webdesign und Konzeption</h2>
+
         <div id="webdesign-content">
+            <div id="webdesign-text-container">
+                <h2 class="header-text" id="h2Webdesign">Wie entsteht Ihre Website?</h2>
+                <div id="webdesignButton">
+                    <ul>
+                        <li class="crationButton" id="vorbereitungButtonID"><h3 id="vorbereitungH2">1. Vorbereitung</h3></li>
+                        <li class="crationButton"  id="designButtonID"><h3  id="designH2">2. Design</h3></li>
+                        <li class="crationButton" id="umsetzungButtonID"><h3 id="umsetzungH2">3. Umsetzung</h3></li>
+                    </ul>
+                </div>
+                <h2 id="webdesignUberschrift">Vorbereitung</h2>
+                <h3 id="webdesignZwischenUS1">Design</h3>
+                <p id="webdesignAbsatz1">Nicht immer ist die Analyse notwendig, doch wenn es sich um das Redesign einer bestehenden Website handelt oder es um das Beurteilen der Websites der Konkurrenz geht, ist diese sehr praktisch. blabla blabla blabla blabla blabla blabla blabla blabla blabla blabla blabla blabla blabla blabla blabla blabla blabla blabla blabla blabla blabla blabla blabla blabla blabla blabla blabla blabla blabla blabla.</p>
+                 <br>
+                <h3 id="webdesignZwischenUS2">Umsetzung</h3>
+                <p id="webdesignAbsatz2">Das Briefing bildet den Ausgangspunkt von allem. Hier lernt man das Projekt kennen, Ziele und Zielpublikum werden definiert. Je genauer man es macht desto mehr Ärger und Fragen erspart man sich später im Prozess. blabla blabla blabla blabla blabla blabla blabla blabla blabla blabla blabla blabla blabla blabla blabla blabla blabla blabla blabla blabla blabla blabla blabla blabla blabla blabla blabla blabla blabla blabla</p>
+                <br>
+                <h3 id="webdesignZwischenUS3">Umsetzung</h3>
+                <p id="webdesignAbsatz3">Nach einem ausführlichen Briefing mit klarer Zieldefinition kann man sich an die Konzeption der Seite machen. Hier werden der Aufbau der Website mittels einer Sitemap, die Navigationsstruktur, Seitenelemente und Contentarten definiert. Das ganze wird mittels Mockups schematisch skizziert.</p>
+            </div>
             <div id="webdesign-image-container">
                 <figure>
-                    <img src="images/webdesign.jpg" alt="webdesign-bild">
+                    <img id="webdesignImage" src="images/resposive.png" alt="webdesign-bild">
                 </figure>
-            </div>
-            <div id="webdesign-text-container">
-                <h2>Webdesign</h2>
-                <p>Webdesign (auch Webgestaltung) umfasst als Disziplin des Mediendesigns die visuelle, funktionale und strukturelle Gestaltung von Websites für das Internet. Die technische Implementierung von Websites wird dagegen als Webentwicklung bezeichnet.</p>
-                <br>
-                <h2>Responsive Design</h2>
-                <p>Der grafische Aufbau einer „responsiven“ Website erfolgt anhand der Anforderungen des jeweiligen Gerätes, mit dem die Website betrachtet wird. Dies betrifft insbesondere die Anordnung und Darstellung einzelner Elemente, wie Navigationen, Seitenspalten und Texte, aber auch die Nutzung unterschiedlicher Eingabemethoden von Maus (klicken, überfahren) oder Touchscreen (tippen, wischen). Technische Basis hierfür sind die neueren Webstandards HTML5, CSS3 (hier insbesondere die Media Queries) und JavaScript.</p>
-                <br>
-                <h2>Konzeption</h2>
-                <p>Erfolg im Internet ist kein Zufall. Die Basis einer guten Website ist ein durchdachtes Konzept. Eine klare Zielsetzung, fundierte Recherche und die Einbeziehung unterschiedlicher Sichtweisen bei der Entwicklung von Content und Struktur, sind dafür ein guter Anfang.</p>
-
-            </div>
-        </div>
-
-    </section>
-
-
-    <section class="wrapper">
-        <div class="section-background"  id="copyright-background"></div>
-        <h2 class="header-text">Technologien die bei uns zum Einsatz kommen</h2>
-        <div class="block-klasse">
-            <div class="text-container">
-                <figure>
-                    <img src="images/webdesign.jpg" alt="HTML-Logo">
-                </figure>
-                <h2>HTML5gfffffff</h2>
-                <p>ist die fünfte Fassung der Hypertext Markup Language (engl. für Hypertext-Auszeichnungssprache), einer Computersprache zur Auszeichnung und Vernetzung von Texten und anderen Inhalten elektronischer Dokumente, vorwiegend im World Wide Web.</p>
             </div>
         </div>
 
@@ -140,14 +152,14 @@
     <section id="form-wrapper">
         <h2>Kontaktformular</h2>
 
-        <form id="formular" enctype="application/x-www-form-urlencoded" action="mailto:damirmarkovic13@yahoo.com" method="post">
+        <form id="formular" enctype="application/x-www-form-urlencoded" action="/php/mail.php" method="post">
 
             <fieldset>
             <div class="form-row">
 	    <label for="vorname">Vorname: </label>
             <input name="vorname" id="vorname" type="text" placeholder="Vorname" required>
 	    </div>
-	
+
 	    <div class="form-row">
             <label for="nachname">Nachname: </label>
             <input name="nachname" id="nachname" type="text" placeholder="Nachname" required>
@@ -159,7 +171,7 @@
             <label for="email">E-Mail-Adresse: </label>
             <input name="email" id="email" type="email" placeholder="information@info.com">
 	    </div>
-	
+
 	    <div class="form-row">
             <label for="webadresse">Web-Adresse: </label>
             <input name="webadresse" id="webadresse" type="url" placeholder="https://www.google.com/">
@@ -205,5 +217,10 @@
         <br>
     </address>
 </footer>
+<script src="js/slider.js"></script>
+<script src="js/menu.js"></script>
+<script src="js/changeTextWebdesign.js"></script>
+
 </body>
+
 </html>

@@ -1,5 +1,9 @@
+
+
 let hilfsvar = 0;
 
+let button1 = document.getElementById("menu-button");
+button1.addEventListener("click", showMenu);
 
 function showMenu(){
     let menuContainer = document.getElementById("nav-bar");
@@ -22,4 +26,3 @@ function showMenu(){
         hilfsvar = 0;
     }
 }
-
